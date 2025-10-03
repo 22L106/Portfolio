@@ -1299,24 +1299,35 @@ body {
     gap: var(--space-20);
     margin-bottom: var(--space-20);
 }
-
 .company-logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 16px;
-    background: var(--color-primary);
-    color: var(--color-btn-primary-text);
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: var(--font-size-lg);
-    transition: var(--transition-bounce);
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #f8fafc 50%, #e3e9f5 100%);
+    box-shadow: 0 2px 12px rgba(33, 128, 141, 0.07);
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.68,-0.55,0.27,1.55);
 }
 
-.experience-card:hover .company-logo {
-    transform: scale(1.1) rotate(5deg);
+.company-logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0px 1px 2px rgba(30,60,80,0.10));
+    transition: transform 0.4s cubic-bezier(0.68,-0.55,0.27,1.55), filter 0.3s cubic-bezier(0.4,0,0.2,1);
 }
+
+
+
+.experience-card:hover .company-logo img {
+    transform: scale(1.10) rotate(3deg);
+    filter: drop-shadow(0px 6px 16px rgba(33,128,141,0.11));
+}
+
 
 .experience-card h3 {
     font-size: var(--font-size-xl);
