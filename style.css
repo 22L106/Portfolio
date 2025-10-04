@@ -2024,7 +2024,8 @@ body {
     to {
         transform: rotate(360deg);
     }
-}
+} 
+
 
 /* Remove shimmer effect that might be causing issues */
 @keyframes shimmer {
